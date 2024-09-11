@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Genial!</h1>
+        <p>Me alegra que quieras escuchar lo que tengo que decir. Desde que llegué a este salón de Cálculo 1, 
+            te juro que sentí que tenía que hablarte, pero no sabía cómo hacerlo. A veces soy un poco penoso, 
+            y no siempre sé cómo empezar una conversación. Sin embargo, espero que puedas ver mi interés y 
+            que te gustaría, no sé, charlar un poco por WhatsApp. Sería interesante para romper el hielo y 
+            conocerte mejor.  </p>
+        <button id="acceptButton">¡Sí, me encantaría!</button>
+        <button id="declineButton">Lo siento, pero no puedo :(.</button>
+    </div>
+    <script>
+        document.getElementById('acceptButton').addEventListener('click', function() {
+            alert('Fantastico si esperas un momentito te llevo a mi numero');
+            setTimeout(function() {
+                window.location.href = 'https://wa.me/62952163'; // Reemplaza con tu enlace de WhatsApp
+            }, 2000); // Redirige después de 5 segundos
+        });
+
+        document.getElementById('declineButton').addEventListener('click', function() {
+            var confirmation = confirm('¿Estás segura de que no quieres aceptar? Sería interesante saber tu respuesta.');
+            if (confirmation) {
+                alert('Bueno, piénsalo bien. Puedes usar el enlace a mi WhatsApp si cambias de opinión.');
+                setTimeout(function() {
+                    window.location.href = 'https://wa.me/62952163'; // Reemplaza con tu enlace de WhatsApp
+                }, 3000); // Redirige después de 5 segundos
+            } else {
+                alert('Veré cómo hago un último intento para conseguir tu atención.');
+            }
+        });
+    </script>
+</body>
+</html>

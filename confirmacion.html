@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Que bonito nombre ¿Puedo decirte algo?</h1>
+        <p> Ya se que esto es como raro pero queria ser un poco creativo</p>
+        <button id="yesButton">Sí</button>
+        <button id="noButton">No</button>
+    </div>
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            window.location.href = 'mensaje.html'; // Redirige a la página del mensaje
+        });
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            var confirmation = confirm('¿Estás segura? wuao que mala suerte tengo ajajaj ');
+            if (confirmation) {
+                alert('Bueno, piénsalo una vez mas y si quieres me escribe y me dices hola solo eso quisiera una oportunidad.');
+                // Opcional: puedes mostrar el enlace aquí mismo en lugar de redirigir
+                setTimeout(function() {
+                    window.location.href = 'https://wa.me/62952163'; // Reemplaza con tu enlace de WhatsApp
+                }, 2000); // Redirige después de 3 segundos
+            } else {
+                alert('Veré cómo hago un último intento para conseguir tu atención.');
+            }
+        });
+    </script>
+</body>
+</html>
